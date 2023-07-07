@@ -1,0 +1,64 @@
+Q=input("請選擇測驗項目 (1)BMI (2)TDEE與BMR:")
+while (Q!="1" and Q!="2"):
+    Q=input("請選擇測驗項目 (1)BMI (2)TDEE與BMR:")
+
+if Q=="1":
+    CM=int(input("請輸入身高(cm):"))
+    KG=int(input("請輸入體重(kg):"))
+    BMI=round(KG/((CM/100)**2),2)
+    if BMI<18.5:
+        print(BMI,"過輕")
+    elif (BMI>=18.5 and BMI<24):
+        print(BMI,"正常")
+    else:
+        print(BMI,"過胖")
+if Q=="2":
+    sex = input("請選擇性別 (1)男 (2)女:")
+    while (sex != "1" and sex != "2"):
+        sex = input("請選擇性別 (1)男 (2)女:")
+    if (sex == "1" or sex == "2"):
+        AGE = int(input("請輸入年齡:"))
+        CM = int(input("請輸入身高(cm):"))
+        KG = int(input("請輸入體重(kg):"))
+        R = input("每周活動量 (1)幾乎沒動 (2)運動1~3天 (3)運動3~5天 (4)運動6~7天 (5)7天以上:")
+        while (R != "1" and R != "2" and R != "3" and R != "4" and R != "5"):
+            R = input("每周活動量 (1)幾乎沒動 (2)運動1~3天 (3)運動3~5天 (4)運動6~7天 (5)7天以上:")
+        if sex=="1":
+            BOY=(66 + (13.7 * KG) + (5 * CM) - (6.8 * AGE))
+            Y1 = round(BOY * 1.2,2)
+            Y2 = round(BOY * 1.375,2)
+            Y3 = round(BOY * 1.55,2)
+            Y4 = round(BOY * 1.725,2)
+            Y5 = round(BOY * 1.9,2)
+            print("基礎代謝率(BMR):",BOY)
+
+            if R=="1":
+                print("每日總消耗熱量(TDEE):",Y1)
+            if R=="2":
+                print("每日總消耗熱量(TDEE):",Y2)
+            if R=="3":
+                print("每日總消耗熱量(TDEE):",Y3)
+            if R=="4":
+                print("每日總消耗熱量(TDEE):",Y4)
+            if R=="5":
+                print("每日總消耗熱量(TDEE):",Y5)
+
+
+        elif sex=="2":
+            GIRL=(655+(9.6*KG)+(1.8*CM)-(4.7*AGE))
+            Y1 = round(GIRL * 1.2,2)
+            Y2 = round(GIRL * 1.375,2)
+            Y3 = round(GIRL * 1.55,2)
+            Y4 = round(GIRL * 1.725,2)
+            Y5 = round(GIRL * 1.9,2)
+            print("基礎代謝率(BMR):",GIRL)
+            if R=="1":
+                print ("每日總消耗熱量(TDEE):",Y1)
+            if R=="2":
+                print ("每日總消耗熱量(TDEE):",Y2)
+            if R=="3":
+                print ("每日總消耗熱量(TDEE):",Y3)
+            if R=="4":
+                print ("每日總消耗熱量(TDEE):",Y4)
+            if R=="5":
+                print ("每日總消耗熱量(TDEE):",Y5)
