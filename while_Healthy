@@ -1,6 +1,6 @@
 Q=input("請選擇測驗項目 (1)BMI (2)TDEE與BMR:")
 while (Q!="1" and Q!="2"):
-    Q=input("請選擇測驗項目 (1)BMI (2)TDEE與BMR:")
+    Q=input("請選擇測驗項目 (1)BMI (2)BMR與TDEE:")
 
 if Q=="1":
     CM=int(input("請輸入身高(cm):"))
