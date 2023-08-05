@@ -16,16 +16,6 @@ win.geometry(f"{400}x{240}+{left}+{top}")
 win.configure(background='#CCEEFF')   # 設定背景色
 
 
-# window_width = win.winfo_screenwidth()    # 取得螢幕寬度
-# window_height = win.winfo_screenheight()  # 取得螢幕高度
-# width = 400
-# height = 240
-# left = int((window_width - width)/2)       # 計算左上 x 座標
-# top = int((window_height - height)/2)      # 計算左上 y 座標
-# win.geometry(f'{width}x{height}+{left}+{top}')
-# win.configure(background='#CCEEFF')   # 設定背景色
-
-
 def BMI():
     if txtHigh.get() !="" and txtWeight.get() !="":
         bmi = myHy.BMI(int(txtHigh.get()), int(txtWeight.get()))
